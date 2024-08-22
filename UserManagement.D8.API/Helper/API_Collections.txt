@@ -1,0 +1,27 @@
+
+-- User Registeration
+curl --location 'http://localhost:5000/api/authentication/registeration' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username":"shahed3",
+    "email":"shahed3@gmail.com",
+    "password":"Shahed@123",
+    "firstname":"Shahed",
+    "lastname":"Dev"
+}'
+
+
+-- User Login 
+curl --location 'http://localhost:5000/api/authentication/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username":"shahed3",
+    "password":"Shahed@123"
+}'
+
+-- Get User 
+curl --location 'http://localhost:5000/api/Home/getuser' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNoYWhlZCIsImp0aSI6IjYwMTIzMjI5LThlZDgtNDlhMy1iOGExLTI5N2VjYjZmODI2ZiIsInJvbGUiOiJBZG1pbiIsIm5iZiI6MTcyNDMxNzEzOCwiZXhwIjoxNzI0MzE3MTk4LCJpYXQiOjE3MjQzMTcxMzgsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo1MDAxIn0.iCLC0vHimVPNDbKOi2EpPljwOpuxvHVLwmDx-js3Bzs' \
+--data ''
+
